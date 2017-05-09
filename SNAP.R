@@ -292,11 +292,13 @@ g_ACC<-transitivity(g_valued, type = c("average")) #0.07016435
 g_CPL<-average.path.length(g_valued) #4.016522
 
 #calculated 1-sided t test statistics for both network ACC and network CPL 
-#hypothese test 1 null: network ACC > meanACC (observed fake-news network is a small-world network)
+#hypothese test 1 null: network ACC = meanACC (observed fake-news network is random netowrk)
+#hypothese test 1 alt: network ACC > meanACC (observed fake-news network is small-world network)
 t_stat1<-(g_ACC-meanACC)/sdACC
 p_value1<-pt(t_stat1,100,lower.tail=FALSE) #one-side test for P[X > x]
-p_value1 #p_value1 close to zero, reject null hyphothesis of fake-news network has small-world network attribute
-#hypothese test 2 null: network CPL < meanCPL (observed fake-news network is a small-world network)
+p_value1 #p_value1 close to zero, reject null hyphothesis, aka fake-news network is small-world network
+#hypothese test 2 null: network CPL = meanCPL (observed fake-news network is random netowrk)
+#hypothese test 2 alt: network CPL < meanCPL (observed fake-news network is small-world network)
 t_stat2<-(g_CPL-meanCPL)/sdCPL
 p_value2<-pt(t_stat2,100,lower.tail=TRUE) #one-sided test for P[X <= x]
-p_value2 #p_value2 close to zero, reject null hyphothesis of fake-news network has small-world network attribute
+p_value2 #p_value2 close to zero, reject null hyphothesis, aka fake-news network is small-world network
