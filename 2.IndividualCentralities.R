@@ -10,6 +10,7 @@ detach(package:sna)
 ######################
 #load data and create network
 ######################
+setwd("~/Documents/RumorNetworkAnalysis")
 pol = read.csv('data/pol_agg.csv',stringsAsFactors = FALSE)
 pol = pol[pol$Source!=pol$website,] #Remove self-loop
 
@@ -38,12 +39,12 @@ wc<-closeness(ob,mode = "all",
               weights = E(ob)$width*0.8,normalized = TRUE)
 we<-evcent(ob,directed = FALSE,
            weights = E(ob)$width*0.8)
-for (i in c('wd','wb','wc','wd')){
-  v<-get(i)
-  print(i)
-  print(sort(v,decreasing=TRUE)[1:5])
-  print('------')
+real<-data.frame(wd)
+for (i in c('wb','wc','wd')){
+  v<-as.data.frame(get(i))
+  real<-cbind(real,v)
 }
+write.csv(real,'real_localcentralities.csv')
 
 ####################################
 ob<-g_fake_valued
@@ -54,9 +55,9 @@ wc<-closeness(ob,mode = "all",
               weights = E(ob)$width*0.8,normalized = TRUE)
 we<-evcent(ob,directed = FALSE,
            weights = E(ob)$width*0.8)
-for (i in c('wd','wb','wc','wd')){
-  v<-get(i)
-  print(i)
-  print(sort(v,decreasing=TRUE)[1:5])
-  print('------')
+fake<-data.frame(wd)
+for (i in c('wb','wc','wd')){
+  v<-as.data.frame(get(i))
+  fake<-cbind(fake,v)
 }
+write.csv(fake,'fake_localcentralities.csv')
