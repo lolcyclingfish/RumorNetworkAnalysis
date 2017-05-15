@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sun May 14 20:04:45 CDT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015c-09a2-d3d3-00000cd27650 
-on database directory /Users/laurengyu/Documents/RumorNetworkAnalysis/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@67a04a1a 
+Sun May 14 21:14:12 CDT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015c-09e2-66d6-00000c986bc0 
+on database directory /Users/laurengyu/Documents/RumorNetworkAnalysis/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@71932b55 
 Loaded from file:/usr/local/Cellar/apache-spark/2.1.0/libexec/jars/derby-10.12.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_121-b13
