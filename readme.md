@@ -12,3 +12,7 @@
 4. Included mutuality, Jaccard coeff and common neighbors (all, in, out) as features. Trained classification model and obtain (unsatisfactory) preliminary results.
 
 ## To-do list
+
+
+## References
+- LIAR: https://arxiv.org/pdf/1705.00648.pdf
